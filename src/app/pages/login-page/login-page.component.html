@@ -1,28 +1,44 @@
 <div class="d-flex justify-content-center">
-    
-    <div class="card" style="width: 25rem; height:35rem">
-      <div class="img">
-        <img src="../../../assets/Images/logo.jpg" class="card-img-top" alt="...">
+  <div class="card" style="width: 25rem; height: 35rem">
+    <div class="img">
+      <img
+        src="../../../assets/Images/logo.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+    </div>
 
-      </div>
+    <div class="card-body">
+      <h5>Sign In</h5>
 
-      <div class="card-body">
-       <h5>Sign In</h5>
-      
-       <div class="form-group">
+      <div class="form-group">
         <label for="exampleInputPassword1">Email</label>
-        <input type="password" class="form-control" id="Email" placeholder="Please Enter E-mail">
+
+        <input
+          type="text"
+          class="form-control"
+          name="Email"
+          placeholder="Please Enter E-mail"
+          formControlName="FirstName"
+        />
       </div>
-      <br>
+      <br />
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Please Enter Password">
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Please Enter Password"
+          formControlName="Password"
+        />
       </div>
+      <br />
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"></form>
       <br> 
-
-
       
-        <a href="#" class="btn btn-info w-100">Sign In</a>
-      </div>
+      <a href="#" class="btn btn-info w-100">Sign In</a>
     </div>
   </div>
+</div>
