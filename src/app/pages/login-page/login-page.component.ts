@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
 })
-export class LoginPageComponent {
+export class LoginPageComponent implements OnInit {
+  
   loginForm = new FormGroup({
-    Email: new FormControl(''),
-    Password: new FormControl(''),
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
   });
 
- 
+  ngOnInit(): void {}
+
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.loginForm.value);
+    console.log(this.loginForm.value);
   }
 }

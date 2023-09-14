@@ -8,37 +8,43 @@
       />
     </div>
 
-    <div class="card-body">
+    <form class="card-body" [formGroup]="loginForm">
       <h5>Sign In</h5>
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Email</label>
+      <div>
+        <label for="email">Email</label>
 
         <input
           type="text"
           class="form-control"
+          id="email"
           name="Email"
           placeholder="Please Enter E-mail"
-          formControlName="FirstName"
-        />
-      </div>
-      <br />
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-          placeholder="Please Enter Password"
-          formControlName="Password"
+          formControlName="email"
         />
       </div>
       <br />
 
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"></form>
-      <br> 
-      
-      <a href="#" class="btn btn-info w-100">Sign In</a>
-    </div>
+
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Please Enter Password"
+          formControlName="password"
+        />
+      </div>
+      <br />
+
+     
+     
+      <br />
+
+      <a (click)="onSubmit()"   class="btn btn-info w-100">Sign In</a>
+
+    </form>
   </div>
 </div>
