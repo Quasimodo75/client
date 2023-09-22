@@ -1,0 +1,42 @@
+<app-navbar />
+
+<div class="container my-5">
+  <h1 class="app_name fw-bolder text-center">SkillScout</h1>
+
+  <div class="search mt-5">
+    <p class="text-center"></p>
+    <p class="fff text-center">Search for candidates</p>
+    <br>
+    <div class="input-group sm">
+      <input
+        type="text"
+        class="form-control"
+        placeholder ="Search by name or skill"
+        aria-describedby="button-addon2"
+      />
+      <button class="btn btn-outline-info" type="button"  id="button-addon2">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="row my-5 mx-5 justify-content-center">
+    <div class="col-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">{{ available.length }}</h5>
+          <p class="card-text">Available candidates</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">{{ shortlisted.length }}</h5>
+          <p class="card-text">shortlisted candidates</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

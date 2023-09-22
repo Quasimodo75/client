@@ -1,0 +1,50 @@
+.app_name {
+    color: #7ecfcf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 200%;
+}
+
+
+.fff {
+    color: rgba(104, 102, 102, 0.864);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 160%;
+   font-weight: -100;
+}
+
+
+.input-group  {
+    width: 770px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+.card {
+    height: 150%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+.card-body {
+margin-top: 20px;
+} 
+
+
+@media only screen and (max-width: 800px) {
+    .input-group  {
+        width: 350px;
+    }
+    
+
+    .card {
+        height: 100%;
+        width: 100%;
+        // margin-left: auto;
+        // margin-right: auto
+    }
+
+}
+

@@ -8,43 +8,52 @@
       />
     </div>
 
-    <form class="card-body" [formGroup]="loginForm">
-      <h5>Sign In</h5>
+    <div class="card-body">
+      <form [formGroup]="loginForm">
+        <h5>Sign In</h5>
 
-      <div>
-        <label for="email">Email</label>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="email"
+            id="Email"
+            placeholder="Please Enter E-mail"
+            required
+          />
+        </div>
+        <!-- <div *ngif="loginForm['email'].touched && loginForm['email'].invalid" class="alert alert-danger">
+          <div *ngif="loginForm['email'].errors && loginForm['email'].errors['required']">
+              Email address is required
+          </div>
+          <div *ngif="loginForm['email'].errors && loginForm['email'].errors['required']">
+            Email address is required
+        </div>
+        </div> -->
+        <br />
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+            id="exampleInputPassword1"
+            placeholder="Please Enter Password"
+            required
+          />
+        </div>
+        <!-- <div *ngif="loginForm['password'].touched && loginForm['password'].invalid" class="alert alert-danger">
+          <div *ngif="loginForm['password'].errors && loginForm['password'].errors['required']">
+              Password is required
+          </div>
+        </div> -->
+        <br />
 
-        <input
-          type="text"
-          class="form-control"
-          id="email"
-          name="Email"
-          placeholder="Please Enter E-mail"
-          formControlName="email"
-        />
-      </div>
-      <br />
-
-
-
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          placeholder="Please Enter Password"
-          formControlName="password"
-        />
-      </div>
-      <br />
-
-     
-     
-      <br />
-
-      <a (click)="onSubmit()"   class="btn btn-info w-100">Sign In</a>
-
-    </form>
+        <a class="btn btn-info w-100" (click)="signIn()" 
+          >Sign In</a
+        >
+      </form>
+    </div>
   </div>
 </div>
