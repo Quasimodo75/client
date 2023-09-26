@@ -12,8 +12,10 @@
  <!-- <input type="file" class="file-upload" onchange="console.log(event.target.files)"> -->
 
 
+ <input   placeholder="Please upload CV" >
+
  <input type="file" class="file-input"
- (change)="onFileSelected($event)" #fileUpload>
+ (change)="onFileSelected($event)" #fileUpload accept="application/pdf,application/vnd.ms-excel" >
 
 <div class="file-upload">
 
